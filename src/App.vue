@@ -8,7 +8,7 @@
     <div>
       <ul class="nav nav-tabs">
         <li class="nav-item">
-          <router-link to="/heroes" class="nav-link">Lista bohaterów</router-link>
+          <router-link to="/" class="nav-link">Lista bohaterów</router-link>
         </li>
         <li class="nav-item">
           <router-link :to="{ name: 'new_hero' }" class="nav-link">Dodaj bohatera</router-link>

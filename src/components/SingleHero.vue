@@ -48,15 +48,17 @@ export default {
         this.$store.state.hero.ID = 0
         this.$store.state.hero.Name = ""
         this.$store.state.hero.Desc = ""
+      // eslint-disable-next-line
+      console.log("Created new hero");
       } else {
         this.index = this.$store.state.heroes.findIndex(x => x.ID === this.$route.params.id);
         this.$store.state.hero.ID = this.$store.state.heroes[this.index].ID;
         this.$store.state.hero.Name = this.$store.state.heroes[this.index].Name;
         this.$store.state.hero.Desc = this.$store.state.heroes[this.index].Desc;
+      // eslint-disable-next-line
+      console.log("Edit of hero " + this.index + " " + this.$store.state.hero.Name);
       }
 
-      // eslint-disable-next-line
-      console.log("Created SingleHero " + this.index + " " + this.$route.name);
 },
   methods: {
     Anuluj: function() {
@@ -68,8 +70,10 @@ export default {
         axios.post('http://localhost:8090/api/v1/heroes', this.$store.state.hero)
 
         // eslint-disable-next-line
-        console.log("Zapis nowego " + this.$store.state.hero.name);
+        console.log("Zapis nowego " + this.$store.state.hero.Name);
+
       } else {
+
         axios.put('http://localhost:8090/api/v1/heroes/' + this.$store.state.hero.ID, this.$store.state.hero)
         
         // eslint-disable-next-line
