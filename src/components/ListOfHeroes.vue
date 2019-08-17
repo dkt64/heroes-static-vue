@@ -41,6 +41,7 @@ export default {
   created () {
     // eslint-disable-next-line
     console.log("Created ListOfHeroes ");
+
     axios.get('http://localhost:8090/api/v1/heroes')
       .then(response => (this.$store.state.heroes = response.data))
 
@@ -53,10 +54,7 @@ export default {
       console.log("Usunięto " + numer);
 
       axios.delete('http://localhost:8090/api/v1/heroes/' + numer)
-      axios.get('http://localhost:8090/api/v1/heroes')
         .then(response => (this.$store.state.heroes = response.data))
-      
-      // this.$store.state.heroes.splice(numer, 1);
     }
   }
 };

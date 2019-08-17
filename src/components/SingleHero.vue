@@ -68,6 +68,7 @@ export default {
       if (this.$route.name == "new_hero") {
 
         axios.post('http://localhost:8090/api/v1/heroes', this.$store.state.hero)
+          .then(response => (this.$store.state.heroes = response.data))
 
         // eslint-disable-next-line
         console.log("Zapis nowego " + this.$store.state.hero.Name);
