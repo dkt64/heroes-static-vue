@@ -14,6 +14,8 @@ Vue.config.productionTip = false
 Vue.use(Router)
 Vue.use(Vuex)
 
+axios.defaults.baseURL = "http://localhost:8080/"
+
 var heroes = []
 var hero = {ID:0, Name:"", Desc:""}
 heroes[0] = hero

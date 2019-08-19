@@ -42,7 +42,7 @@ export default {
     // eslint-disable-next-line
     console.log("Created ListOfHeroes ");
 
-    axios.get('http://localhost:8090/api/v1/heroes')
+    axios.get('/api/v1/heroes')
       .then(response => (this.$store.state.heroes = response.data))
 
     // eslint-disable-next-line
@@ -53,7 +53,7 @@ export default {
       // eslint-disable-next-line
       console.log("Usunięto " + numer);
 
-      axios.delete('http://localhost:8090/api/v1/heroes/' + numer)
+      axios.delete('/api/v1/heroes/' + numer)
         .then(response => (this.$store.state.heroes = response.data))
     }
   }

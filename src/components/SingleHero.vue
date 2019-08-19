@@ -67,7 +67,7 @@ export default {
     Zapis: function() {
       if (this.$route.name == "new_hero") {
 
-        axios.post('http://localhost:8090/api/v1/heroes', this.$store.state.hero)
+        axios.post('/api/v1/heroes', this.$store.state.hero)
           .then(response => (this.$store.state.heroes = response.data))
 
         // eslint-disable-next-line
@@ -75,7 +75,7 @@ export default {
 
       } else {
 
-        axios.put('http://localhost:8090/api/v1/heroes/' + this.$store.state.hero.ID, this.$store.state.hero)
+        axios.put('/api/v1/heroes/' + this.$store.state.hero.ID, this.$store.state.hero)
         
         // eslint-disable-next-line
         console.log("Zapis starego " + this.$store.state.hero.ID);
