@@ -2,7 +2,7 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '' : '/',
     devServer: {
-      port: 80,
+      port: 8080,
     },
     configureWebpack: {
       devtool: 'source-map'
