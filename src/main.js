@@ -14,7 +14,7 @@ Vue.config.productionTip = false
 Vue.use(Router)
 Vue.use(Vuex)
 
-axios.defaults.baseURL = "http://localhost:80/"
+axios.defaults.baseURL = "http://heroes-app-bartek.westeurope.azurecontainer.io:80/"
 
 var heroes = []
 var hero = {ID:0, Name:"", Desc:""}
